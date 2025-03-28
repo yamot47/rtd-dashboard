@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Recommended meta tags for mobile web apps -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="GrowPH">
+    <meta name="theme-color" content="#000000">
+    <title>RTD</title>
+    <meta name="keywords" content="" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="__manifest.json">
+</head>
+
+
+<body class="bg-white">
+
+    <!-- loader -->
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- * loader -->
+
+
+    <!-- App Capsule -->
+        <!-- App Header -->
+    <div class="appHeader no-border transparent position-absolute">
+        <div class="left">
+<!--             <a href="#" class="headerButton goBack">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a> -->
+        </div>
+        <div class="pageTitle"></div>
+        <div class="right">
+<!--             <a href="index" class="headerButton">
+              Back to  Login
+            </a> -->
+        </div>
+    </div>
+    <div id="appCapsule" >
+
+
+
+        <div class="login-form mt-1">
+            <div class="section">
+                <img src="assets/img/rtd.png" alt="image" class="form-image" style="width:70%;">
+            </div>
+            <div class="section mt-1">
+                <h1>RTD Dashboard</h1>
+                <h4>Mobile App</h4>               
+            </div>
+            <div class="section mt-1 mb-5">
+
+                    <div class="form-group basic">
+                        <div class="input-wrapper">
+                            <label class="form-label" for="name1">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your Username">
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group basic">
+                        <div class="input-wrapper">
+                            <label class="form-label" for="name1">Password</label>
+                            <input type="password" class="form-control" id="password1" placeholder="Enter your Password">
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="form-links mt-4">
+                        <div>
+                           <Center>  </Center>
+                        </div>
+            
+                    </div>
+
+                    <div class="form-button-group ">
+                        <button type="submit" class="btn bg-info btn-block btn-lg btnLogin">Log in</button>
+                    </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- * App Capsule -->
+
+
+        <!-- DialogIconedSuccess -->
+        <div class="modal fade dialogbox" id="DialogIconedSuccess" data-bs-backdrop="static" tabindex="-1"
+            role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-icon text-success">
+                        
+            
+                    </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Success</h5>
+                    </div>
+                    <div class="modal-body">
+                       Login Success..
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-inline">
+                            <a href="#" class="btn" data-bs-dismiss="modal">CLOSE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- * DialogIconedSuccess -->
+
+        <!-- DialogIconedDanger -->
+        <div class="modal fade dialogbox" id="DialogIconedDanger" data-bs-backdrop="static" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-icon text-danger">
+                        <ion-icon name="close-circle"></ion-icon>
+                    </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Error</h5>
+                    </div>
+                    <div class="modal-body">
+                       System  : Please check all field 
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-inline">
+                            <a href="#" class="btn" data-bs-dismiss="modal">CLOSE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- * DialogIconedDanger -->
+
+        <!-- DialogIconedDanger2 -->
+        <div class="modal fade dialogbox" id="DialogIconedDanger2" data-bs-backdrop="static" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-icon text-danger">
+                        <ion-icon name="close-circle"></ion-icon>
+                    </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Error</h5>
+                    </div>
+                    <div class="modal-body">
+                       System  : Username or Password is incorrect
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-inline">
+                            <a href="#" class="btn" data-bs-dismiss="modal">CLOSE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- * DialogIconedDanger2 -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
+    <script src="assets/js/lib/bootstrap.min.js"></script>   
+     <!-- Ionicons -->    <!-- Ionicons -->
+    <script type="module" src="assets/js/ionic/ionicons.esm.js"></script>
+    <script nomodule src="assets/js/ionic/ionicons.js"></script>
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <script src="assets/js/plugins/progressbar-js/progressbar.min.js"></script>
+    <script src="assets/js/base.js"></script>
+    <script src="assets/js/plugins/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+
+   $(document).ready(function() {
+
+            function saveAuthData(token, expiry) {
+                try {
+                    localStorage.setItem("authToken", token);
+                    localStorage.setItem("authExpiry", expiry);
+                } catch (e) {
+                    console.warn("localStorage not available, switching to sessionStorage");
+                    sessionStorage.setItem("authToken", token);
+                    sessionStorage.setItem("authExpiry", expiry);
+                }
+            }
+            function clearAuthAndRedirect() {
+                // Clear localStorage
+                localStorage.removeItem("authToken");
+                localStorage.removeItem("authExpiry");
+
+            }
+            function redirectTokenNotExpire() {
+                // Clear localStorage
+                window.location.href = "dashboard.html";
+
+            }
+            function isTokenExpired() {
+               let expiryTime = localStorage.getItem("authExpiry") || sessionStorage.getItem("authExpiry");
+
+                if (!expiryTime) {
+                    console.error("No expiry time found, assuming token is expired.");
+                    return true;
+                }
+
+                return Date.now() >= parseInt(expiryTime);
+            }
+
+            // Check if token is expired
+
+            function getAuthData() {
+                let token = localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
+                let expiry = localStorage.getItem("authExpiry") || sessionStorage.getItem("authExpiry");
+                return { token, expiry };
+            }
+            // Get stored token and expiry
+            const { token, expiry } = getAuthData();
+
+
+            
+            if (token || $.trim(token) !== "") { 
+                // If token is missing or empty, log out
+                console.log("Token is valid and existed. Redirecting to dashboard.");
+                redirectTokenNotExpire();
+                
+            } else if (isTokenExpired()) {
+                console.warn("Token expired, clearing storage and redirecting.");
+               clearAuthAndRedirect();
+            } else {
+                console.log("Token is valid. Redirecting to dashboard.");
+                window.location.href = "dashboard.html"; 
+            }
+    $(document).on('click','.btnLogin',function(){
+
+
+        var status = 2;
+        var username=$.trim(encodeURI($("#username").val()));
+        var password=$.trim(encodeURI($("#password1").val()));
+
+
+        if(username == "" || password == ""){
+           // swal("System message", "System  : Please check all field ", "warning"); 
+
+
+            $("#DialogIconedDanger").modal("show");
+            $("#btnRegister").attr("disabled", false);  
+            $("#btnRegister").html('Register');
+        } else {
+            $(".btnLogin").attr("disabled", true);  
+            $(".btnLogin").html('Loading');
+            $.ajax({
+                url: "https://smcgphtrading.sanmiguel.com.ph/TradingAPIV2/token",
+                method: 'POST',
+                contentType: "text/plain",
+                data: {
+                    // username: "IOS_app_dev",
+                    // password: "11202024",
+                    username : username,
+                    password : password,
+                    grant_type: "password"
+                },
+                success: function(response) {
+
+                    
+                   // console.log(response.access_token);
+                    // Save token
+                    localStorage.setItem("authToken", response.access_token);
+                    // let expiryDate="";
+                    // expiryDate = new Date(Date.now() + response.expires_in * 1000).toUTCString();
+                    // document.cookie = "authToken="+response.access_token+"; path=/; Secure; expires="+expiryDate;
+
+                        let expiryTime = Date.now() + response.expires_in * 1000; // Convert to timestamp
+                        saveAuthData(response.access_token, expiryTime);
+
+
+                        // document.cookie = `authToken=${response.access_token}; path=/; Secure; SameSite=None`;
+                        // document.cookie = `authExpiry=${expiryTime}; path=/; Secure; SameSite=None`; // Store expiry separately
+
+
+
+                    if ($.trim(response.access_token) !=="") {
+        
+
+                        $("#DialogIconedSuccess").modal("show");
+                        setTimeout(function() {
+                            window.location.replace("dashboard.html");
+                        }, 2000);
+                    } else {
+                        $("#DialogIconedDanger2").modal("show");
+                    }
+
+                         $(".btnLogin").attr("disabled", false);  
+                         $(".btnLogin").html('Log in');
+                },
+                error: function(error) {
+                        console.log("error : "+error)
+                         $("#DialogIconedDanger2").modal("show");
+                         $(".btnLogin").attr("disabled", false);  
+                         $(".btnLogin").html('Log in');
+                    // console.log('Error in registration:', error);
+                    // swal("System message", "Failed to login due to a network or server error.", "warning");
+                }                     
+            });
+        }
+
+        });
+
+    });
+
+</script>
+

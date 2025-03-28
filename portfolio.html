@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Recommended meta tags for mobile web apps -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <title>RTD</title>
+</head>
+
+
+ <div id="loadsidebar"></div>
+
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-info text-light">
+        <div class="left">
+            <a href="#" class="headerButton" data-bs-toggle="offcanvas" data-bs-target="#sidebarPanel">
+                                  <i class="fas fa-bars"></i> <!-- Font Awesome Icon -->
+            </a>
+        </div>
+        <div class="pageTitle">
+            Portfolio Dashboard
+        </div>
+
+    </div>
+    <!-- * App Header -->
+
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+
+        <div class="section full">
+            <div class="wide-block transparent p-0">
+                <ul class="nav nav-tabs lined iconed" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#demandtab" role="tab">
+                          <i class='fas fa-clipboard-list' style='font-size:21px; padding: 10px;'></i>   <label> DEMAND </label>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#portfoliotab" role="tab">
+                               <i class='fa fa-book' style='font-size:21px; padding: 10px;'></i> <label> PORTFOLIO </label>
+                        </a>
+                    </li>
+
+ 
+                </ul>
+            </div>
+        </div>
+        <div class="container mt-4">
+        <!-- tab content -->
+        <div class="section full mb-2">
+            <div class="tab-content">
+                       <div class="section mt-2 d-flex justify-content-end">
+                            <div id="datetime_realtime"></div>
+                       </div>
+                         <div class="divider bg-primary mt-2 mb-3"></div>
+                <!-- DEMAND -->
+                <div class="tab-pane fade show active" id="demandtab" role="tabpanel">
+                               <div class="in">
+                                    <h4 class="name">Interval : <span class="" id="intervalstring"></span> </h4>
+                                
+                                </div>
+                    
+                    <div class="chip">
+                    <span class="chip-label">CURRENT DEMAND, MW</span>
+                    </div>
+                    <br/> <br/>                  
+                    <div id="demand-table"></div>
+
+                    <br/>
+                    <!-- Chart container -->
+                    <div class="chart-container shadow bg-white rounded col-12 d-flex justify-content-center align-items-center" style="height: 35vh;">
+                    <canvas id="myChart00"></canvas>
+                    </div>
+                    <br/> <br/> 
+                    <div class="chip">
+                    <span class="chip-label">TOTAL SCHED GEN (SMC), MW</span>
+                    </div>
+                    <br/> <br/>  
+                    <div id="demand-tabletotalsched"></div> <br/> 
+                    <div class="chip">
+                    <span class="chip-label">TOTAL ACTUAL GEN (SMC), MW</span>
+                    </div>
+                    <br/> <br/> 
+                    <div id="demand-tableactualgen"></div> <br/> 
+                </div>
+                <!-- * DEMAND -->
+
+                <!-- * PORTFOLIO -->
+                <div class="tab-pane fade" id="portfoliotab" role="tabpanel">
+                    <div class="chip">
+                    <span class="chip-label">SCHEDULE</span>
+                    </div> 
+                    <br/> <br/> 
+                    <div  class="table-responsive" id="portfolio-table" style="font-size:6px;"></div>   
+                     
+                </div>
+                <!-- * PORTFOLIO -->
+
+
+            </div>
+        </div>
+        <!-- * tab content -->
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- * App Capsule -->
+
+
+    <!-- App Bottom Menu -->
+<!--     <div class="appBottomMenu">
+
+        <a href="package_list" class="item">
+            <div class="col">
+                <ion-icon name="layers-outline"></ion-icon>
+            </div>
+        </a>
+
+        <a href="dashboard.html" class="item active">
+            <div class="col">
+                <ion-icon name="home-outline"></ion-icon>
+            </div>
+        </a>
+        <a href="#sidebarPanel" class="item" data-bs-toggle="offcanvas">
+            <div class="col">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </a>
+    </div> -->
+    <!-- * App Bottom Menu -->
+
+    <!-- * App Bottom Menu -->
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
+
+
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <!-- Ionicons -->    <!-- Ionicons -->
+    <script type="module" src="assets/js/ionic/ionicons.esm.js"></script>
+    <script nomodule src="assets/js/ionic/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- ProgressBar js -->
+    <script src="assets/js/plugins/progressbar-js/progressbar.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+    <script src="assets/js/plugins/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/universal.js"></script>
